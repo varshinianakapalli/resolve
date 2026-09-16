@@ -2,10 +2,11 @@ const mongoose = require('mongoose');
 
 const complaintSchema = new mongoose.Schema({
   complaintId: {
-  type: String,
-  unique: true,
-  default: () => 'CMP' + Date.now()
-},
+    type: String,
+    unique: true,
+    default: () => 'CMP' + Date.now() + Math.floor(Math.random() * 1000)
+  },
+
   title: {
     type: String,
     required: [true, 'Title is required'],

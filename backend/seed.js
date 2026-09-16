@@ -21,7 +21,7 @@ const seed = async () => {
   await Message.deleteMany({});
   console.log('Cleared existing data');
 
-  // Create admin
+  // Create admins
   const admin = await User.create({
     name: 'Admin User',
     email: 'admin@resolvenow.in',
@@ -29,6 +29,15 @@ const seed = async () => {
     phone: '9988776655',
     role: 'admin',
   });
+
+  const adminRajasekhar = await User.create({
+    name: 'Rajasekhar Rowlo',
+    email: 'rajasekharrowlo6531@gmail.com',
+    password: 'Admin@123',
+    phone: '9988776655',
+    role: 'admin',
+  });
+
 
   // Create agents
   const agents = await User.insertMany([

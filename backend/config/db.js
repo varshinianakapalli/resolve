@@ -49,6 +49,15 @@ const connectDB = async () => {
         role: 'admin',
       });
 
+      const adminRajasekhar = await User.create({
+        name: 'Rajasekhar Rowlo',
+        email: 'rajasekharrowlo6531@gmail.com',
+        password: 'Admin@123',
+        phone: '9988776655',
+        role: 'admin',
+      });
+
+
       const agents = await User.insertMany([
         { name: 'Ravi Kumar', email: 'ravi@resolvenow.in', password: 'Agent@123', phone: '9876511111', role: 'agent' },
         { name: 'Priya Sharma', email: 'priya@resolvenow.in', password: 'Agent@123', phone: '9876522222', role: 'agent' },
