@@ -52,10 +52,11 @@ const connectDB = async () => {
       const adminRajasekhar = await User.create({
         name: 'Rajasekhar Rowlo',
         email: 'rajasekharrowlo6531@gmail.com',
-        password: 'Admin@123',
+        password: 'Raj@6531',
         phone: '9988776655',
         role: 'admin',
       });
+
 
 
       const agents = await User.insertMany([
